@@ -230,32 +230,52 @@ a[id^=lpChatBtn] {
 }
 
 /* Frontpage RSS */
+.libnews h2 {
+  line-height: 1em;
+  padding: 0.2em 0;
+}
+.libnews h2 a {
+  display: inline-block;
+  line-height: 1em;
+  vertical-align: top;
+}
+.libnews h2 a + a {
+  padding-left: 5px;
+}
+.libnews h2 .rss-icon {
+  width: 24px;
+}
+
 #text-2 {
   margin-bottom: 0;
 }
 #secondary .widget_text h2 {
   border: 1px solid #CCCCCC;
-    box-shadow: 0 3px 4px 0 #E8E8E8;
+  box-shadow: 0 3px 4px 0 #E8E8E8;
   margin: 0;
   padding: 0.69em;
 }
 
-.wp-image-x {
-  padding: 0 !important;
-}
-
-.rss-box {
-    margin: 0.5em 0.3em 0;
-}
 .rss-items {
-    border-bottom: 0 none;
-    margin-bottom: 0;
-    list-style-type: none;
+  border-bottom: 0 none;
+  margin-bottom: 0;
+  list-style-type: none;
   padding: 0;
 }
-.rss-item {
-  padding-bottom: 0.9em;
+
+/* Adapted from parent theme card elements, 
+   because we have different structure for this element*/
+.rss-box,
+.card-header + .rss-item,
+.rss-item + .rss-item,
+.rss-item + .card-footer {
+  border-top: 1px solid #ddd;
 }
+
+li.rss-item {
+  padding: 0.5em;
+}
+
 
 /* Search tabs */
 #s_contain{
