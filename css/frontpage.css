@@ -4,24 +4,6 @@
  * Last Modified: Dec 4, 2014 by SW
 */
 
-#mobile {
-  display: none;
-}
-
-@media screen and (max-device-width: 480px) {
-  #mobile {
-     display: block;
-  }
-  #mobile_redirect {
-     margin-top: 1em;
-     margin-bottom: 1em;
-  }
-}
-
-.addclass h2 {
-  font-size: 1.2em;
-}
-
 /* Quick link icons section */
 .quicklinks {
   list-style: none;
@@ -39,59 +21,44 @@
 .quicklinks li img {
   display: inline;
 }
+/* END: Quick link icons section */
 
-/* Content (except search tabs and new titles, see bottom of page) */
-.fbs-flyout-pane{ /* for summon search box? */
-  z-index: 10;
+/* Availability Widget */
+/* Reset styles a bit */
+#availabilityWidgetWrap h1,
+#availabilityWidgetWrap h2,
+#availabilityWidgetWrap h3,
+#availabilityWidgetWrap h4,
+#availabilityWidgetWrap h5,
+#availabilityWidgetWrap h6 {
+  margin: 0;
+  line-height: 1em;
 }
 
-#main_body{
-  padding-left:0;
-    padding-right: 331px;  /* RC width */
-  overflow: hidden;
-  clear: both;
-  text-align: center;
+#availabilityWidgetWrap ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-#main_body .column {
-  position: relative;
-  float: left;
- 
+/* Apply styles to make it look right in the sidebar */
+#availabilityWidgetWrap .availabilityWidgetHeading {
+  font-size: 1.5em;
+  padding: 0.5em 0.35em;
+}
+#availabilityWidgetWrap #availabilityList {
+  border-top: 1px solid #ddd;
 }
 
-#innerwrapper{
-  margin-top:15px;
-  zoom: 1;
+#availabilityWidgetWrap #availabilityList li {
+  padding: 0.5em;
 }
-
-#middle_sect {
-  width: 100%;
-  text-align: left;
-  padding: 5px 20px;
+#availabilityWidgetWrap #availabilityList li + li {
+  border-top: 1px solid #ddd;
 }
+/* END: Availability Widget */
 
-.lt-ie8 #middle_sect {
-  padding-top: 20px;
-  padding-bottom: 5px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-#middle_sect h2 {
-  padding-bottom: 4px;
-  border-bottom: 2px solid #EDEDED;
-}
-
-/* Carousel Override */
-.nivoSlider {
-  margin-bottom: 0 !important;
-}
-
-#text-4 {
-  margin: 0 0 1.2em;
-}
-
-/* Frontpage RSS */
+/* Frontpage RSS Widget */
 .libnews h2 {
   line-height: 1em;
   padding: 0.2em 0;
@@ -108,9 +75,6 @@
   width: 24px;
 }
 
-#text-2 {
-  margin-bottom: 0;
-}
 #secondary .widget_text h2 {
   border: 1px solid #CCCCCC;
   box-shadow: 0 3px 4px 0 #E8E8E8;
@@ -137,12 +101,11 @@
 li.rss-item {
   padding: 0.5em;
 }
+/* END: Frontpage RSS Widget */
 
-
+/* TODO: Clean up the css underneath here... */
 /* Search tabs */
 #s_contain{
-  /*width:600px;*/
-  
   font-family: Verdana, Arial, Helvetica, sans-serif;
   font-size:14px;
 }
@@ -399,11 +362,13 @@ ul#s_content{
   -moz-box-shadow: 0px 0px 0px 1px #c0c0c0;
   box-shadow: 0px 0px 0px 1px #c0c0c0;
 }
+
 .lt-ie9 .s_search_button{
   border: 1px solid #c0c0c0;
   height: 35px;
   margin: 0;
 }
+
 .s_search_button:active{
   background: #e5e5e5;
   -webkit-box-shadow: 0px 0px 0px 1px #c0c0c0, inset 0 2px 1px 0px #d0d0d0;
@@ -411,11 +376,13 @@ ul#s_content{
   box-shadow: 0px 0px 0px 1px #c0c0c0, inset 0 2px 1px 0px #d0d0d0;
   border:1px solid transparent;
 }
+
 .lt-ie9 .s_search_button:active{
   border: 1px solid #c0c0c0;
   progid:DXImageTransform.Microsoft.gradient(enabled=false);
   background-color:#d7d7d7;
 }
+
 .s_search_feild, .inputDiv{
   float:left;
   display:block;
@@ -438,6 +405,7 @@ ul#s_content{
   background: linear-gradient(top, #e0e0e0 0%,#ffffff 10%,#ffffff 100%);
   -webkit-appearance: none;
 }
+
 .inputDiv select{
   display:block;
   border:0;
@@ -448,9 +416,11 @@ ul#s_content{
   vertical-align:middle;
   font-size:17px;
 }
+
 .s_search_feild:focus{
   box-shadow: 0 0 8px 0 rgba(0, 100, 255, 0.3);
 }
+
 #s_contain hr{
   height: 0px;
   border-top: 1px solid #C5C5C5;
@@ -459,315 +429,17 @@ ul#s_content{
   border-left: 0px;
   clear:both;
 }
+
 #s_contain p{
   margin: 0 0 5px 0;
 }
+
 #s_contain .s_title{
   font-weight:bold;
 }
+
 #s_contain .s_description{
   color:#555555;
     margin:0 0 0 10px;
     font-size:80%;
-}
-
-/** Availability Widget **/
-/*div#availabilityWidgetWrap {
-
-}
-.availabilityWidgetHeading {
-  margin-top: 0px;
-  margin-bottom: 5px;
-  font-size: 0.85em;
-}
-/* Kill yellow drop shadow 
-.overrideBoxShadow {
-  /* -webkit-box-shadow: 0px 3px 4px 0px #e8e8e8 !important;
-  -mox-box-shadow: 0px 3px 4px 0px #e8e8e8 !important;
-  box-shadow: 0px 3px 4px 0px #e8e8e8 !important; 
-    -webkit-box-shadow: none;
-    -mox-box-shadow: none;
-    box-shadow: none;
-}
-
-#availabilityList {
-  list-style: none;
-  margin: 5px 0px 5px;
-}
-
-#availabilityList li {
-  display: inline;
-  display: inline-block;
-  cursor: pointer;
-  /* margin-left: 5%;
-  margin-right: 5%; 
-  width: 33%;
-  font-weight: bold;
-}
-
-#availabilityList li a {
-  text-decoration: none;
-  font-size: 0.9em;
-}
-
-.availabilityWidgetButton {
-    -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
-    -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
-    box-shadow:inset 0px 1px 0px 0px #ffffff;
-    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #f6f6f6));
-    background:-moz-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
-    background:-webkit-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
-    background:-o-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
-    background:-ms-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
-    background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0);
-    background-color:#ffffff;
-    -moz-border-radius:6px;
-    -webkit-border-radius:6px;
-    border-radius:6px;
-    border:1px solid #dcdcdc;
-    display:inline-block;
-    cursor:pointer;
-    color:#666666;
-    font-family:arial;
-    font-size:15px;
-    font-weight:bold;
-    padding:6px 24px;
-    text-decoration:none;
-    text-shadow:0px 1px 0px #ffffff;
-}
-.availabilityWidgetButton:hover {
-    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f6f6f6), color-stop(1, #ffffff));
-    background:-moz-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
-    background:-webkit-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
-    background:-o-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
-    background:-ms-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
-    background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#ffffff',GradientType=0);
-    background-color:#f6f6f6;
-}
-.availabilityWidgetButton:active {
-    position:relative;
-    top:1px;
-}*/
-
-/** Availability Widget **/
-
-div#availabilityWidgetList {
-  /* border: 2px solid #DCDCDC;
-  border-radius: 10px;
-  background-color: #ececec; */
-}
-div#availabilityWidgetWrap {
-
-}
-.availabilityWidgetHeading {
-  margin-top: 1em;
-  margin-bottom: 5px;
-  padding-top: 1em;
-  text-transform: uppercase;
-  text-align: center;
-}
-/* Kill yellow drop shadow */
-.overrideBoxShadow {
-  /* -webkit-box-shadow: 0px 3px 4px 0px #e8e8e8 !important;
-  -mox-box-shadow: 0px 3px 4px 0px #e8e8e8 !important;
-  box-shadow: 0px 3px 4px 0px #e8e8e8 !important; */
-    -webkit-box-shadow: none;
-    -mox-box-shadow: none;
-    box-shadow: none;
-}
-
-#availabilityList {
-  /*list-style: none;
-  margin: 5px 0px 5px;*/
-  list-style: outside none none;
-    margin: 5px 0px;
-    padding-left: 0px;
-
-}
-
-#availabilityList li {
-  /*display: inline;
-  display: inline-block;
-  cursor: pointer;*/
-  /* margin-left: 5%;
-  margin-right: 5%; */
-  /*padding-right: 1em;
-  font-weight: bold;*/
-      display: inline-block;
-    cursor: pointer;
-    font-weight: bold;
-    background-color: #F37626;
-    background-image: url('http://testnet.library.ryerson.ca/wp-content/uploads/book_arrow_white.png');
-    padding-right: 3em;
-    background-repeat: no-repeat;
-    background-position: 95% center;
-    margin-left: 2em;
-  padding-top: 3px;
-  padding-bottom: 3px;
-
-}
-#availabilityList li:hover {
-  background-image: url('http://testnet.library.ryerson.ca/wp-content/uploads/bookingarrow1.png');
-}
-
-#availabilityList li a {
-  text-decoration: none;
-  font-size: 0.9em;
-  color: #ffffff;
-}
-
-.availabilityWidgetButton {
-   
-    
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0);
-   
-   /* -moz-border-radius:6px;
-    -webkit-border-radius:6px;
-    border-radius:20px;
-    border:2px solid #dcdcdc;*/
-    display:inline-block;
-    cursor:pointer;
-    color:#666666;
-    font-family:arial;
-    font-size:15px;
-    font-weight:bold;
-    padding:10px 40px;
-    text-decoration:none;
-   
-}
-ul#availabilityList .availabilityWidgetButton:hover {
-   
-    color: #404041; /*#eeb306;*/
-   
-
-}
-ul#availabilityList .availabilityWidgetButton {
-   /*   -moz-border-radius:6px;
-    -webkit-border-radius:6px;
-    border-radius:20px; 
-    display:inline-block;
-    cursor:pointer;
-     font-family:arial;
-    font-size:15px;
-    font-weight:bold;
-    padding:10px 40px;
-    text-decoration:none;
-    color: #1c5971;
-  background-color: #FFFFFF;*/
-    display: inline-block;
-    cursor: pointer;
-    font-family: arial;
-    font-size: 15px;
-    font-weight: bold;
-    text-decoration: none;
-    /*background-color: #F37626;*/ 
-    color: #FFF;
-    padding: 10px 20px;
-    width: 100%
-
-}
-
-.availabilityWidgetButton:active {
-    position:relative;
-    top:1px;
-}
-
-
-
-
-/*Hours sidebar widget 
-div#hoursSidebarWrap {
-  display: block;
-  clear: both;
-  margin-bottom: -1em;
-}
-a.hoursSidebarWidget {
-    display: inline-block;
-    width: 100%;
-}
-div.hoursSidebarCommon {
-  
-}
-div#hoursSidebarLeft {
-  float: left;
-}
-div#hoursSidebarRight {
-  float: left;
-  text-align: center;
-  margin-left: 2em;
-}
-#hoursSidebarRight a {
-  display: block;
-}
-span#hoursWidgetBuildingStatus {
-  display: block;
-  clear: both;
-  font-weight: bold;
-  font-size: 1.7em;
-  border-radius: 5px;
-}
-span#hoursWidgetHoursStatus {
-    line-height: 1.35em;
-}
-span.hoursWidgetOpen {
-    text-shadow:0px 1px 0px #ffffff;
-    color: rgb(59, 221, 59);
-}
-span.hoursWidgetClosed {
-  color: rgb(216, 83, 83);
-}
-
-*/
-/** New Hours Sidebar widget **/
-
-
-div#hoursSidebarWrap {
-  display: block;
-  clear: both;
-  margin-bottom: -1em;
-  background-color: #363636;
-}
-a.hoursSidebarWidget {
-    display: inline-block;
-    width: 100%;
-}
-div.hoursSidebarCommon {
-  
-}
-div#hoursSidebarLeft {
-  float: left;
-}
-div#hoursSidebarLeft img {
-  border: none;
-  background-color: #363636;
-}
-div#hoursSidebarRight {
-  float: left;
-  text-align: center;
-  margin-left: 2em;
-  color: #ffffff
-}
-#hoursSidebarRight a {
-  display: block;
-}
-span#hoursWidgetBuildingStatus {
-  display: block;
-  clear: both;
-  font-weight: bold;
-  font-size: 1.9em;
-  border-radius: 5px;
-  color: #eeb30d;
-  padding-top: 0.3em;
-}
-span#hoursWidgetHoursStatus {
-    line-height: 1.35em;
-}
-span.hoursWidgetOpen {
-    
-    color: rgb(59, 221, 59);
-}
-span.hoursWidgetClosed {
-  color: rgb(216, 83, 83);
 }
