@@ -22,6 +22,23 @@
   font-size: 1.2em;
 }
 
+/* Quick link icons section */
+.quicklinks {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.quicklinks li {
+  font-size: 0.85em;
+  text-align: center;
+  width: 100px;
+  float: left;
+}
+
+.quicklinks li img {
+  display: inline;
+}
 
 /* Content (except search tabs and new titles, see bottom of page) */
 .fbs-flyout-pane{ /* for summon search box? */
@@ -64,161 +81,6 @@
   padding-bottom: 4px;
   border-bottom: 2px solid #EDEDED;
 }
-
-#quickpicks{
-  margin: 0;
-  padding: 0;
-  border: 0;
-    list-style: none;
-} 
-#quickpicks li {
-    text-align:center;
-    width:84px;
-    height:100px;
-    float:left;
-    padding:5px;
-    margin:0 5px;
-    display: block;
-    line-height: 100%;
-}
-#quickpicks li a, #quickpicks li a:link, #quickpicks li a:visited{
-      display:block;
-      width:74px;
-      height:90px;
-      padding:5px;
-      
-      color:#444444;
-      text-decoration:none;
-      
-      opacity:0.8;
-      
-      -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
-      border-radius: 5px;
-      -webkit-transition:all 0.2s ease-in;  
-      -moz-transition:all 0.2s ease-in;  
-      -o-transition:all 0.2s ease-in;  
-      transition:all 0.2s ease-in;  
-}
-#quickpicks li a:active, #quickpicks li a:hover{
-      background-color:#eeeeee;
-      color:#000000;
-      text-decoration:none;
-      opacity:1;
-}
-#quickpicks li img{
-        border:0;
-        outline:0;
-        padding:0;
-        margin:0 auto 5px auto;
-        display:block;
-}
-
-/* Hours */
-#quickpicks .wp-image-69 {
-  padding-top:10px;
-}
-/* Study Rooms */
-#quickpicks .wp-image-74 {
-  padding-top:0px;
-}
-/* Laptop */
-#quickpicks .wp-image-70 {
-  padding-top:3px;
-}
-/* Renew/Lib Account */
-#quickpicks .wp-image-65 {
-  padding-top:7px;
-}
-/* Research Workshops */
-#quickpicks .wp-image-72 {
-  padding-top:0px;
-}
-/* Faculty */
-#quickpicks .wp-image-68 {
-  padding-top:3px;
-}
-/* Copyright */
-#quickpicks .wp-image-66 {
-  padding-top:10px;
-}
-/* LC */
-#quickpicks .wp-image-71 {
-  padding-top:13px;
-}
-/* Book Librarian */
-#quickpicks .wp-image-10021 {
-  padding-top: 5px;
-}
-/* Blackboard */
-#quickpicks .wp-image-64 {
-  padding-top:10px;
-}
-/* RACER */
-#quickpicks .wp-image-486 {
-  padding-top:22px;
-}
-/* Refworks */
-#quickpicks .wp-image-483 {
-  padding-top:15px;
-  padding-bottom: 5px;
-}
-/* Ask Us image */
-#quickpicks .wp-image-63 {
-  padding-top:10px;
-} 
-/* Ask Us Widget */
-/*#quickpickask {
-  display: inline-block;
-  list-style: none;
-  height: 90px;
-  width: 85px;
-  color: #444;
-  margin: 3px 5px 0;
-  padding: 5px;
-    opacity:0.8;
-      -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
-      border-radius: 5px;
-      -webkit-transition:all 0.2s ease-in;  
-      -moz-transition:all 0.2s ease-in;  
-      -o-transition:all 0.2s ease-in;  
-      transition:all 0.2s ease-in;  
-}
-#quickpickask:active,
-#quickpickask:hover{
-      background-color:#eeeeee;
-      color:#000000;
-      text-decoration:none;
-      opacity:1;
-}
-#lpButDivID-1313887460492 {
-  padding: 3px 0 0;
-  margin: 0;
-  height: 73px;
-  overflow: hidden;
-}
-.lpStaticButton,
-#lpButDivID-1313887460492 td{
-  padding: 0;
-  margin: 0;
-  border: none;
-}
-img[id^=lpChatBtnImg] {
-  margin: 0;
-  width: 74px;
-}
-a[id^=lpChatBtn] {
-  height: auto;
-  overflow: hidden;
-}
-.lt-ie9 img[id^=lpChatBtnImg] {
-  width: auto;
-  max-width: 74px;
-}
-.lt-ie9 .lpStaticButtonTR td {
-  text-align:left;
-}*/
 
 /* Carousel Override */
 .nivoSlider {
