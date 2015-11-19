@@ -11,9 +11,10 @@
 
 .quicklinks li {
   font-size: 0.85em;
+  float: left;
+  min-height: 125px;
   text-align: center;
   width: 100px;
-  float: left;
 }
 
 .quicklinks li img {
