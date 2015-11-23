@@ -13,20 +13,30 @@ $.fn.rula_tabs = function() {
   // Generate Tabs
   $.each(self.children('.tab'), generateTabs);
 
+  // Set the first tab to be active
+  tabList.children().first().addClass('active');
+
   // Insert content of first tab into the display
   updateTabDisplay( self.children('.tab').first() );
 
   // Bind onClick event to tabs
-  tabList.children('li').click(function() {
-    var tabIndex = $(this).data('tab-index');
-    updateTabDisplay( self.children('.tab').eq(tabIndex) );
-  });
+  tabList.children('li').click(onTabClicked);
 
-  // Function to generate clickable tabs
+  // Function to generate tabs
   function generateTabs(index, value) {
     tabList.append('<li data-tab-index="'+ index +'">' + $(value).data('tab-title') + '</li>');
   }
 
+  // Callback handler when tabs are clicked 
+  function onTabClicked() {
+    var tabIndex = $(this).data('tab-index');
+    
+    // Set the active tab
+    tabList.children('.active').first().removeClass('active');
+    $(this).addClass('active');
+
+    updateTabDisplay( self.children('.tab').eq(tabIndex) );
+  }
   // Update the tab display element
   function updateTabDisplay(element) {
     tabDisplay.empty();

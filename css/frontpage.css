@@ -121,7 +121,10 @@ li.rss-item {
   display: inline-block;
   cursor: pointer;
   padding: 0.5em;
+}
 
+.tabset .tab-list li.active {
+  background: #ddd;
 }
 
 .tabset .tab-list li + li {
@@ -129,6 +132,7 @@ li.rss-item {
 }
 
 .tabset .tab-display {
+  background: #ddd;
   border-top: 1px solid #ddd;
   padding: 0.5em;
 }
