@@ -8,56 +8,56 @@
   <div class="tab" data-tab-title="Search Everything">
     <form class="search-bar" action="http://ryerson.summon.serialssolutions.com/search" method="GET">
       <input type="search" name="q" placeholder="Search Everything">
-      <button type="submit">Go</button>
+      <button type="submit">Search Everything</button>
     </form>
   </div>
 
   <div class="tab" data-tab-title="Books &amp; Media">
     <div class="tabset search">
-      <div class="tab" data-tab-title="Keywords">
+      <div class="tab" data-tab-title="Keyword">
         <form class="search-bar" action="http://catalogue.library.ryerson.ca/search/X" method="GET">
           <input type="search" name="SEARCH" placeholder="Keywords">
-          <button type="submit">Submit</button>
+          <button type="submit">Keyword Search</button>
         </form>
       </div>
 
       <div class="tab" data-tab-title="Title">
         <form class="search-bar" action="http://catalogue.library.ryerson.ca/search/t" method="GET">
           <input type="search" name="SEARCH" placeholder="Title">
-          <button type="submit">Submit</button>
+          <button type="submit">Title Search</button>
         </form>
       </div>
 
       <div class="tab" data-tab-title="Author">
         <form class="search-bar" action="http://catalogue.library.ryerson.ca/search/a" method="GET">
           <input type="search" name="SEARCH" placeholder="Author">
-          <button type="submit">Submit</button>
+          <button type="submit">Author Search</button>
         </form>
       </div>
 
       <div class="tab" data-tab-title="Course Readings">
         <form class="search-bar" action="http://catalogue.library.ryerson.ca/search/r" method="GET">
           <input type="search" name="SEARCH" placeholder="Course Code">
-          <button type="submit">Submit</button>
+          <button type="submit">Course Code Search</button>
         </form>
         
         <form class="search-bar" action="http://catalogue.library.ryerson.ca/search/p" method="GET">
           <input type="search" name="SEARCH" placeholder="Course Instructor">
-          <button type="submit">Submit</button>
+          <button type="submit">Course Instructor Search</button>
         </form>
       </div>
 
       <div class="tab" data-tab-title="Call Number">
         <form class="search-bar" action="http://catalogue.library.ryerson.ca/search/c" method="GET">
           <input type="search" name="SEARCH" placeholder="Call Number">
-          <button type="submit">Submit</button>
+          <button type="submit">Call Number Search</button>
         </form>
       </div>
 
       <div class="tab" data-tab-title="Subject">
         <form class="search-bar" action="http://catalogue.library.ryerson.ca/search/d" method="GET">
           <input type="search" name="SEARCH" placeholder="Library of Congress Subject">
-          <button type="submit">Submit</button>
+          <button type="submit">Subject Search</button>
         </form>
       </div>      
     </div>
@@ -66,7 +66,7 @@
   <div class="tab" data-tab-title="Journals List">
     <form class="search-bar" action="http://sfx.scholarsportal.info/ryerson/a-z/default" method="GET">
       <input type="search" name="param_pattern_value" placeholder="Search Journals">
-      <button type="submit">Submit</button>
+      <button type="submit">Search Journals</button>
       <input type="hidden" name="param_textSearchType_save" value="startsWith">
       <input type="hidden" name="param_chinese_checkbox_type_save" value="Pinyin">
       <input type="hidden" name="param_lang_save" value="eng">
@@ -171,7 +171,7 @@
         <option value="http://learn.library.ryerson.ca/theatre">Theatre</option>
         <option value="http://learn.library.ryerson.ca/planning">Urban &amp; Regional Planning</option> 
       </select>
-      <button type="submit">Submit</button>
+      <button type="submit">Go</button>
     </form>
     <a href="http://library.ryerson.ca/articles/indexes_title/">Browse A-Z Databases List</a>
     <!-- END Research Databases -->
