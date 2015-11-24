@@ -2,7 +2,7 @@
  *  Styles for Ryerson Library homepage
  */
 
-/* Quick link icons section */
+/* Quick link icons  */
 .quicklinks {
   list-style: none;
   margin: 0;
@@ -20,7 +20,7 @@
 .quicklinks li img {
   display: inline;
 }
-/* END: Quick link icons section */
+/* END: Quick link icons */
 
 /* Availability Widget */
 /* Reset styles a bit */
@@ -101,38 +101,3 @@ li.rss-item {
   padding: 0.5em;
 }
 /* END: Frontpage RSS Widget */
-
-/* Search tabs widget */
-/* Adopt the 'card' look */
-.tabset {
-  background: #FFF;
-  border-radius: 2px;
-  border: 1px solid #eee;
-  box-shadow: 0px 3px 6px -1px #aaa; 
-}
-
-.tabset .tab-list {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.tabset .tab-list li {
-  display: inline-block;
-  cursor: pointer;
-  padding: 0.5em;
-}
-
-.tabset .tab-list li.active {
-  background: #ddd;
-}
-
-.tabset .tab-list li + li {
-  border-left: 1px solid #ddd;
-}
-
-.tabset .tab-content {
-  background: #ddd;
-  border-top: 1px solid #ddd;
-  padding: 0.5em;
-}
