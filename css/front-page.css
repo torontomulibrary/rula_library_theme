@@ -101,3 +101,27 @@ li.rss-item {
   padding: 0.5em;
 }
 /* END: Frontpage RSS Widget */
+
+/* Frontpage search widget styles */
+.search form { 
+  display: block; 
+  position: relative;
+}
+
+.search form input, 
+.search form button {
+  box-sizing: border-box;
+}
+
+.search form input[type="search"] {
+  width: 100%;
+  padding: 3px 6px;
+}
+
+.search form.search-bar button {
+  position: absolute;
+  font-size: 1rem;
+  padding: 0.45em 1em;
+  right: 0;
+  top: 0;
+}
