@@ -1,5 +1,4 @@
 ;(function ( $, window, document, undefined ) {
-
   "use strict";
 
   var pluginName = "rula_tabs",
@@ -7,13 +6,8 @@
     propertyName: "value"
   };
 
-  // The actual plugin constructor
   function Plugin ( element, options ) {
     this.element = element;
-    // jQuery has an extend method which merges the contents of two or
-    // more objects, storing the result in the first object. The first object
-    // is generally empty as we don't want to alter the default options for
-    // future instances of the plugin
     this.settings = $.extend( {}, defaults, options );
     this._defaults = defaults;
     this._name = pluginName;
@@ -26,7 +20,6 @@
     this.displayTabContent(0);
   }
 
-  // Avoid Plugin.prototype conflicts
   $.extend(Plugin.prototype, {
     init: function() {
       // Grab the list of tabs
@@ -43,7 +36,6 @@
       var $tabs = this.tabs;
       var $tabList = this.tabList; // there's gotta be a better way than this...
 
-      // For each <div class="tab"> add it to the tabList, and bind an event handler to it.
       $tabs.each(function(index, value) {
         var $tab = $('<li data-tab-index="'+ index +'">' + $(value).data('tab-title') + '</li>').appendTo($tabList);
 
@@ -55,19 +47,26 @@
     displayTabContent: function(tabIndex) {
       var $tabContent = this.tabContent,
       $tabList = this.tabList,
-      $newActiveTabContent = this.tabs.eq(tabIndex).html(); // there's gotta be a better way than this...
+      $tabs = this.tabs,
+      $activeTab = $tabList.children('.active').first();
+
+      // there's gotta be a better way than this...
+      var $newActiveTab = $tabs.eq(tabIndex); 
+      var $tab = $tabs.eq($activeTab.data('tab-index'));
+
+      // Move the tabContent back to where it was...
+      $tabContent.contents().appendTo($tab);
 
       // Set the active tab class
-      $tabList.children('.active').removeClass('active');
+      $activeTab.removeClass('active');
       $tabList.children().eq(tabIndex).addClass('active');
 
       // insert content of tab into display
-      $tabContent.empty().append( $newActiveTabContent );
+      // NB: THIS MOVES THE ENTIRE NODE
+      $newActiveTab.contents().appendTo($tabContent);
     }
   });
 
-  // A really lightweight plugin wrapper around the constructor,
-  // preventing against multiple instantiations
   $.fn[ pluginName ] = function ( options ) {
     return this.each(function() {
       if ( !$.data( this, "plugin_" + pluginName ) ) {
