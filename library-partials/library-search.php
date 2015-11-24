@@ -35,14 +35,12 @@
         </form>
       </div>
 
-      <div class="tab" data-tab-title="Course Code">
+      <div class="tab" data-tab-title="Course Readings">
         <form action="http://catalogue.library.ryerson.ca/search/r" method="GET">
           <input type="search" placeholder="Course Code">
           <button type="submit">Submit</button>
         </form>
-      </div>
-
-      <div class="tab" data-tab-title="Course Instructor">
+        
         <form action="http://catalogue.library.ryerson.ca/search/p" method="GET">
           <input type="search" placeholder="Course Instructor">
           <button type="submit">Submit</button>
@@ -55,7 +53,7 @@
           <button type="submit">Submit</button>
         </form>
       </div>
-      
+
       <div class="tab" data-tab-title="Subject">
         <form action="http://catalogue.library.ryerson.ca/search/d" method="GET">
           <input type="search" placeholder="Library of Congress Subject">
