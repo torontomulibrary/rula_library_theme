@@ -10,11 +10,18 @@
       <input type="search" name="q" placeholder="Search Everything">
       <button type="submit">Search Everything</button>
     </form>
+    <hr>
+    <a href="http://library.ryerson.ca/summon">What is this?</a>
+    <a href="http://ryerson.summon.serialssolutions.com/advanced">Advanced Search</a>
   </div>
 
   <div class="tab" data-tab-title="Books &amp; Media">
     <div class="tabset search">
       <div class="tab" data-tab-title="Keyword">
+        <h3>Search by Keyword</h3>
+        <p>
+          Find books, journals, DVDs, CDs, ebooks, theses, maps, Government Documents …
+        </p>
         <form class="search-bar" action="http://catalogue.library.ryerson.ca/search/X" method="GET">
           <input type="search" name="SEARCH" placeholder="Keywords">
           <button type="submit">Keyword Search</button>
@@ -22,6 +29,10 @@
       </div>
 
       <div class="tab" data-tab-title="Title">
+        <h3>Search by Title</h3>
+        <p>
+          e.g., "Boom Bust and Echo", "Map that Changed the World"
+        </p>
         <form class="search-bar" action="http://catalogue.library.ryerson.ca/search/t" method="GET">
           <input type="search" name="SEARCH" placeholder="Title">
           <button type="submit">Title Search</button>
@@ -29,6 +40,10 @@
       </div>
 
       <div class="tab" data-tab-title="Author">
+        <h3>Search by Author</h3>
+        <p>
+          e.g., "Smith, John", "Canadian Medical Association", "Tragically Hip"
+        </p>
         <form class="search-bar" action="http://catalogue.library.ryerson.ca/search/a" method="GET">
           <input type="search" name="SEARCH" placeholder="Author">
           <button type="submit">Author Search</button>
@@ -36,11 +51,20 @@
       </div>
 
       <div class="tab" data-tab-title="Course Readings">
+        <h3>Search by Course Code</h3>
+        <p>
+          e.g., "ece210"
+        </p>
         <form class="search-bar" action="http://catalogue.library.ryerson.ca/search/r" method="GET">
           <input type="search" name="SEARCH" placeholder="Course Code">
           <button type="submit">Course Code Search</button>
         </form>
-        
+        <hr>
+
+        <h3>Search by Instructor</h3>
+        <p>
+          e.g., "Gao, Yunxiang"
+        </p>
         <form class="search-bar" action="http://catalogue.library.ryerson.ca/search/p" method="GET">
           <input type="search" name="SEARCH" placeholder="Course Instructor">
           <button type="submit">Course Instructor Search</button>
@@ -48,6 +72,10 @@
       </div>
 
       <div class="tab" data-tab-title="Call Number">
+        <h3>Search by Call Number</h3>
+        <p>
+          e.g., "QA403.P74 2004", "HD31"
+        </p>
         <form class="search-bar" action="http://catalogue.library.ryerson.ca/search/c" method="GET">
           <input type="search" name="SEARCH" placeholder="Call Number">
           <button type="submit">Call Number Search</button>
@@ -55,12 +83,18 @@
       </div>
 
       <div class="tab" data-tab-title="Subject">
+        <h3>Search by Library of Congress Subject</h3>
+        <p>
+          e.g., "caribbean area history", "eating disorders", "women employment canada"
+        </p>
         <form class="search-bar" action="http://catalogue.library.ryerson.ca/search/d" method="GET">
           <input type="search" name="SEARCH" placeholder="Library of Congress Subject">
           <button type="submit">Subject Search</button>
         </form>
       </div>      
     </div>
+    <hr>
+    <a href="http://catalogue.library.ryerson.ca/search/X">Advanced Search</a>
   </div>
 
   <div class="tab" data-tab-title="Journals List">

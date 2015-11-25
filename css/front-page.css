@@ -103,6 +103,14 @@ li.rss-item {
 /* END: Frontpage RSS Widget */
 
 /* Frontpage search widget styles */
+.search h3 {
+  margin: 0;
+}
+
+.search hr {
+  margin: 0.5em 0;
+}
+
 .search form { 
   display: block; 
   position: relative;
