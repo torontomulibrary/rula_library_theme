@@ -18,6 +18,8 @@ get_header(); ?>
 
           <?php get_template_part( 'library-partials/library', 'quicklinks' ); ?>
 
+          <?php get_template_part( 'library-partials/library', 'news' ); ?>
+
           <div class="entry-content">
             <?php the_content(); ?>
           </div><!-- .entry-content -->
