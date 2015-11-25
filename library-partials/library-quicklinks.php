@@ -1,5 +1,5 @@
  <!--  Quick links -->
-<ul class="quicklinks">
+<ul class="quicklinks clear">
   <li>
     <a href="https://server.iad.liveperson.net/hc/64904228/?cmd=file&file=visitorWantsToChat&site=64904228&SV!skill=Ryerson&LEAppKey=f907f2d9acd64b7f8c00b83bed3c2822&referrer=http%3A//library.ryerson.ca/info/contactus/&bId=16" data-ga-event="Homepage,QuickPick,Askus">
       <img alt="Need Help? Ask Us" src="<?php bloginfo('stylesheet_directory'); ?>/img/quicklink-icons/AskUs.png"><br>
