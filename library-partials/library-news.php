@@ -13,7 +13,7 @@
   function the_rss_date($entry) {
     $timestamp = strtotime($entry->pubDate);
     $date = date('F j, Y', $timestamp);
-    echo "<p class=\"pubdate\">$date</p>";
+    echo $date;
   }
 
   /* 
@@ -28,21 +28,23 @@
   $rss = $xml->channel;
 ?>
 
-<section class="entry-content libnews">
-  <h2>
-    <a href="http://library.ryerson.ca/blog/">Library News</a>
-    <a href="http://apps.library.ryerson.ca/api/merge/" data-ga-event="Homepage,SocialMedia,RSS">
-      <img class="rss-icon noborder" src="<?php bloginfo('template_directory'); ?>/img/social-icons/32x32%20PNG/32-rss.png" alt="Subscribe to news feed">
-    </a>
-  </h2>
-
-  <?php foreach($rss->item as $entry) : ?>
-    <article class="rss-item">
-      <h1><?php the_rss_link($entry); ?></h1>
-      <section>
-        <?php the_rss_date($entry); ?>
-        <?php the_rss_description($entry); ?>
-      </section>
-    </article>
-  <?php endforeach; ?>
+<section class="entry-content libnews card">
+  <header class="card-header">
+    <h2>
+      <a href="http://library.ryerson.ca/blog/">Library News</a>
+      <a href="http://apps.library.ryerson.ca/api/merge/" data-ga-event="Homepage,SocialMedia,RSS">
+        <img class="rss-icon noborder" src="<?php bloginfo('template_directory'); ?>/img/social-icons/32x32%20PNG/32-rss.png" alt="Subscribe to news feed">
+      </a>
+    </h2>
+  </header>
+    <?php foreach($rss->item as $entry) : ?>
+      <article class="rss-item card-content">
+        <h1><?php the_rss_link($entry); ?></h1>
+        <section>
+          <p class="pubdate"><?php the_rss_date($entry); ?></p>
+          <?php the_rss_description($entry); ?>
+        </section>
+      </article>
+    <?php endforeach; ?>
+    
 </section>

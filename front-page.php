@@ -16,8 +16,6 @@ get_header(); ?>
         <article id="post-<?php the_ID(); ?>" <?php post_class(array('content-section', 'blurb')); ?>>
           <?php get_template_part( 'library-partials/library', 'search' ); ?>
 
-          <?php get_template_part( 'library-partials/library', 'quicklinks' ); ?>
-
           <?php get_template_part( 'library-partials/library', 'news' ); ?>
 
           <div class="entry-content">

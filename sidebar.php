@@ -13,6 +13,7 @@
 ?>
 
 <div id="secondary" class="widget-area" role="complementary">
+  <?php get_template_part( 'library-partials/library', 'quicklinks' ); ?>
   <?php get_template_part( 'library-partials/library', 'hours' ); ?>
   <?php get_template_part( 'library-partials/library', 'availability' ); ?>
   
