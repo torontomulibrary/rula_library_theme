@@ -37,14 +37,14 @@
       </a>
     </h2>
   </header>
-    <?php foreach($rss->item as $entry) : ?>
-      <article class="rss-item card-content">
-        <h1><?php the_rss_link($entry); ?></h1>
-        <section>
-          <p class="pubdate"><?php the_rss_date($entry); ?></p>
-          <?php the_rss_description($entry); ?>
-        </section>
-      </article>
-    <?php endforeach; ?>
-    
+
+  <?php $i = 0; foreach($rss->item as $entry) : ?>
+    <article class="rss-item card-content">
+      <h1><?php the_rss_link($entry); ?></h1>
+      <section>
+        <p class="pubdate"><?php the_rss_date($entry); ?></p>
+        <?php the_rss_description($entry); ?>
+      </section>
+    </article>
+  <?php $i++; if ($i >= 5) { break; } endforeach; ?>
 </section>
