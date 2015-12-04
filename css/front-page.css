@@ -135,3 +135,16 @@
   right: 0;
   top: 0;
 }
+/* END: Frontpage search widget styles */
+
+/* Override wpnewcarousels styles */
+@media screen and (max-width: 59.9999em) {
+  .wpnewcarousels-slider {
+    width: 47%;
+    float: left;
+    margin-bottom: 1.5em;
+    margin-left: 1.25%;
+    margin-right: 1.25%;
+  }
+}
+/* END: Override wpnewcarousels styles */
