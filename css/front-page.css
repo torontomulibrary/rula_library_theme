@@ -150,21 +150,21 @@
 }
 /* END: Override wpnewcarousels styles */
 
-/* Override some slick slider styles */
-.slick { display: none; }
-.slick.slick-initialized { display: block; }
-.slick-slider {
-  margin-bottom: 0;
-}
+/* Featured Titles Carousel */
+.featured-slider { display: none; }
+.featured-slider.slick-initialized { display: block; }
 
-.slick-track .slick-slide {
-  transition: opacity 0.2s ease-in-out;
-}
+.slick-slider { margin-bottom: 0; }
 
-.slick-track:hover .slick-slide {
-  opacity: 0.65;
-}
+.slick-track .slick-slide { transition: opacity 0.2s ease-in-out; }
+.slick-track:hover .slick-slide { opacity: 0.65; }
+.slick-track:hover .slick-slide:hover { opacity: 1; }
 
-.slick-track:hover .slick-slide:hover {
-  opacity: 1;
+@media screen and (max-width: 59.9999em) {
+  .featured-titles.card {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
+/* END: Featured Titles Carousel */

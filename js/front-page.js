@@ -1,6 +1,6 @@
 $(function() {
   $('.tabset').rula_tabs();
-  $('.slick').slick({
+  $('.featured-slider').slick({
     arrows: false,
     // lazyLoad: 'progressive',
     speed: 750,
