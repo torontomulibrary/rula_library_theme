@@ -1,4 +1,15 @@
 <?php 
+  /* 
+   *  Takes the RSS entry and formats it as a link
+   */
+  function the_book_title($featured_book) {
+    $link_to = $featured_book['URL'];
+    $img_src = $featured_book['IMAGE'];
+    $img_alt = $featured_book['TITLE'];
+    // echo "<a href=\"$link_to\"><img data-lazy=\"$img_src\" alt=\"$img_alt\"></a>";
+    echo "<a href=\"$link_to\"><img src=\"$img_src\" alt=\"$img_alt\"></a>";
+  }
+
   // Fetch JSON data
   $json_source_url = 'http://apps.library.ryerson.ca/api/titles_feed/fetch_json.php';
   $json = file_get_contents( $json_source_url );
@@ -10,10 +21,9 @@
   </header>
   <article class="card-content">
     <div class="slick">
-      <?php foreach($data['TITLES'] as $title) : ?>
+      <?php foreach($data['TITLES'] as $featured_book) : ?>
         <div>
-          <!-- <img data-lazy="<?php echo $title['IMAGE'] ?>"> -->
-          <img src="<?php echo $title['IMAGE'] ?>">
+          <?php the_book_title($featured_book); ?>
         </div>
       <?php endforeach; ?>
     </div>
