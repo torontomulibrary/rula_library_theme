@@ -149,3 +149,8 @@
   }
 }
 /* END: Override wpnewcarousels styles */
+
+/* Override some slick slider styles */
+.slick-slider {
+  margin-bottom: 0;
+}

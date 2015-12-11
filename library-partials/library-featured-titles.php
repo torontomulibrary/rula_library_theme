@@ -6,14 +6,14 @@
 ?>
 <section class="card" style="margin-top: 0.5em">
   <header class="card-header">
-    <h2>Featured Titles</h2>
+    <h2>Featured: <?php echo $data['FEATURED']['FEATURED_TITLE']; ?></h2>
   </header>
   <article class="card-content">
     <div class="slick">
       <?php foreach($data['TITLES'] as $title) : ?>
         <div>
-          <img src="<?php echo $title['IMAGE'] ?>">
           <!-- <img data-lazy="<?php echo $title['IMAGE'] ?>"> -->
+          <img src="<?php echo $title['IMAGE'] ?>">
         </div>
       <?php endforeach; ?>
     </div>
