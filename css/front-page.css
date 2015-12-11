@@ -151,6 +151,20 @@
 /* END: Override wpnewcarousels styles */
 
 /* Override some slick slider styles */
+.slick { display: none; }
+.slick.slick-initialized { display: block; }
 .slick-slider {
   margin-bottom: 0;
+}
+
+.slick-track .slick-slide {
+  transition: opacity 0.2s ease-in-out;
+}
+
+.slick-track:hover .slick-slide {
+  opacity: 0.65;
+}
+
+.slick-track:hover .slick-slide:hover {
+  opacity: 1;
 }
